@@ -1,3 +1,93 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    // NOTE: 戻り値のないPromiseの場合にvoidを付けるのを強制されるため無効にする
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    // NOTE: importのソート順
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+
+    // NOTE: 名前付きimportの並び順をアルファベット順にする
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true, // import/orderで制御するので無効にする
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+
+    // NOTE: Reactのprops, state等を分割代入でなくても許可する
+    "react/destructuring-assignment": "off",
+
+    // NOTE: importにReactを含めないのを許可する
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+
+    // NOTE: Reactのコンポーネント定義を関数式、アロー関数を許可する
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": ["function-declaration", "arrow-function"]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["firebaseSecretKey.ts", "next.config.js"],
+  "overrides": [
+    {
+      "files": ["app/api/**/*.ts", "app/api/**/*.js"],
+      // NOTE: 開発中に1つしかエクスポートがないケースが考えられるので一部のディレクトリは名前付きエクスポートを許可する
+      "rules": {
+        "import/prefer-default-export": "off"
+      }
+    }
+  ]
 }
