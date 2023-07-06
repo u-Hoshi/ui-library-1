@@ -73,6 +73,20 @@
       {
         "namedComponents": ["function-declaration", "arrow-function"]
       }
+    ],
+    // NOTE: Reactのpropsでスプレッド演算子を許可する
+    "react/jsx-props-no-spreading": "off",
+    // NOTE: Test, Storybook, Mockでしか利用しない依存関係はpeerDependenciesでなくても許可する
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.{js,jsx,ts,tsx}",
+          "**/*.stories.{js,jsx,ts,tsx}",
+          "**/*.msw.{js,ts}"
+        ],
+        "peerDependencies": false
+      }
     ]
   },
   "settings": {
