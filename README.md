@@ -5,6 +5,6 @@
 - Next.js(13.4.8)
 - TypeScript
 - Material-UI(5.13.7)
-- Storybook
+- Storybook(7.0.26)
 - ESLint
 - Prettier
