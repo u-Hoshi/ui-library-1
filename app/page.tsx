@@ -7,7 +7,8 @@ export default function Home() {
     <>
       <div>
         <h2>atoms</h2>
-        <Link href="/atoms">atoms</Link>
+        <Link href="/atoms/button">・button</Link>
+        <Link href="/atoms/box">・box</Link>
       </div>
       <div>
         <h2>organisms</h2>
