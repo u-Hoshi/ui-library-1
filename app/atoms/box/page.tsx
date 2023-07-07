@@ -1,16 +1,16 @@
 'use client';
 
-import { useTheme } from '@mui/system';
+// import { useTheme } from '@mui/system';
 
 import { Box } from '@/src/components/atoms';
 
 export default function Home() {
-  const theme = useTheme();
+  //   const theme = useTheme();
   return (
     // eslint-disable-next-line
-    <Box sx={{ backgroundColor: theme.palette.secondary.main }}>
+    <Box sx={{ backgroundColor: 'yellow' }}>
       {/* ↑一時的に無効 */}
-      <p>hoge</p>
+      <p>foo</p>
     </Box>
   );
 }
