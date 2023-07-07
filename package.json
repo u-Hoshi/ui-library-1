@@ -10,7 +10,8 @@
     "lint:fix": "next lint --fix",
     "storybook": "storybook dev -p 6006",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -40,10 +41,13 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
+    "chromatic": "^6.19.9",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.12",
     "prettier": "^3.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "ui-library-1@0.1.0"
 }
