@@ -8,7 +8,7 @@ export default function Home() {
   const theme = useTheme();
   return (
     // eslint-disable-next-line
-    <Box sx={{ backgroundColor: theme.palette.primary.main }}>
+    <Box sx={{ backgroundColor: theme.palette.secondary.main }}>
       {/* ↑一時的に無効 */}
       <p>hoge</p>
     </Box>
