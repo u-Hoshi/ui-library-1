@@ -22,6 +22,18 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    // NOTE: パッケージのインポートでは拡張子を無視し、下記の拡張子無しでインポートできるようにする
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     // NOTE: 戻り値のないPromiseの場合にvoidを付けるのを強制されるため無効にする
     "@typescript-eslint/no-misused-promises": [
       "error",
@@ -33,15 +45,7 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "object"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
