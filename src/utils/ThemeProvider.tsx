@@ -4,20 +4,20 @@ import * as React from 'react';
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#F95700',
+      main: '#84A7A1',
     },
     secondary: {
-      main: '#00A4CC',
+      main: '#2E8A99',
     },
     common: {
       black: '#2D2D2D',
       white: '#FFFFFF',
     },
     warning: {
-      main: '#818181',
+      main: '#1F6E8C',
     },
     info: {
-      main: '#F6F6F6',
+      main: '#0E2954',
     },
     error: {
       main: '#FFCAAE',
