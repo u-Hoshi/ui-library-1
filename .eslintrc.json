@@ -97,7 +97,12 @@
   "ignorePatterns": ["firebaseSecretKey.ts", "next.config.js"],
   "overrides": [
     {
-      "files": ["app/api/**/*.ts", "app/api/**/*.js"],
+      "files": [
+        "app/api/**/*.ts",
+        "app/api/**/*.js",
+        "src/components/**/*.ts",
+        "src/components/**/*.js"
+      ],
       // NOTE: 開発中に1つしかエクスポートがないケースが考えられるので一部のディレクトリは名前付きエクスポートを許可する
       "rules": {
         "import/prefer-default-export": "off"
