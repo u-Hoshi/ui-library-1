@@ -6,7 +6,7 @@ const meta: Meta<typeof CustomBox> = {
   component: CustomBox,
   args: {
     sx: {
-      bgcolor: 'green',
+      bgcolor: 'primary.main',
     },
     children: 'hoge',
   },
@@ -17,7 +17,7 @@ export default meta;
 export const Primary: StoryObj<typeof CustomBox> = {
   args: {
     sx: {
-      bgcolor: 'red',
+      bgcolor: 'primary.main',
     },
     children: 'hoge',
   },
