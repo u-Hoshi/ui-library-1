@@ -53,4 +53,24 @@ https://www.chromatic.com/setup?appId=64a8009ea6fee9b63fbd6a01 に登録する
 https://www.chromatic.com/build?appId=64a8009ea6fee9b63fbd6a01
 
 
+## UIテスト
+storybookを使ってuiの変更テストを行うためにはGithubActionsを使ってCIでデプロイを走らせる必要があるのでworkflowsに設定を追加する
 
+[.github/workflows/chromatic.yaml](https://github.com/u-Hoshi/ui-library-1/blob/main/.github/workflows/chromatic.yaml)を参照
+
+デプロイが走るようになったら実際にブランチを切って開発をしてプルリクを出す。
+
+プルリクを出してしばらくすると、`UI Tests`のチャックが始まるので、これが終わるまで待つ。
+
+UiTestsのDetailを見ると、どのような変更があったかがわかる。
+
+![](public/storybookUiTest.png)
+
+差分を確認して`accept`を押すと、差分がなくなりマージできるようになる。
+
+右側の`diff`をオンにすると変更された箇所がマークされる。
+
+![](public/chromaticdiff.png)
+
+コードの差分↓
+![](public/githubdiff.png)
