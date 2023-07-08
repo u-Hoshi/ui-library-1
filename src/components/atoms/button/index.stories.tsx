@@ -17,6 +17,6 @@ export const Primary: StoryObj<typeof CustomButton> = {
   args: {
     text: 'hoge',
     onClick: () => alert('ボタンがクリックされました'),
-    color: 'primary',
+    color: 'secondary',
   },
 };
