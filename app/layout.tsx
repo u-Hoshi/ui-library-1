@@ -1,14 +1,10 @@
-"use client";
+'use client';
 
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider } from '@mui/material';
 
-import { theme } from "@/src/utils/ThemeProvider";
+import { theme } from '@/src/utils/ThemeProvider';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
