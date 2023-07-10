@@ -9,6 +9,12 @@ const meta: Meta<typeof CustomButton> = {
     onClick: () => alert('ボタンがクリックされました'),
     color: 'primary',
   },
+  argTypes: {
+    color: {
+      control: 'radio',
+      options: ['primary', 'secondary', 'warning'],
+    },
+  },
 };
 
 export default meta;
@@ -17,6 +23,6 @@ export const Primary: StoryObj<typeof CustomButton> = {
   args: {
     text: 'hoge',
     onClick: () => alert('ボタンがクリックされました'),
-    color: 'secondary',
+    color: 'primary',
   },
 };
