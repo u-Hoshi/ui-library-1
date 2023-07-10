@@ -1,9 +1,9 @@
-name: "CI Lint"
+name: 'CI Tests'
 
 on:
   push:
     branches:
-      - "**"
+      - '**'
 
 jobs:
   run_lint:
@@ -23,3 +23,5 @@ jobs:
         run: yarn install
       - name: Run linter
         run: yarn run lint
+      - name: Run Jest
+        run: yarn run jest
