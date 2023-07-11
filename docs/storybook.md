@@ -105,3 +105,29 @@ const config: StorybookConfig = {
 };
 
 ```
+
+## argTypesについて
+
+[公式ドキュメント](https://storybook.js.org/docs/react/api/arg-types)
+
+Type:
+
+```ts
+{
+  [key: string]: {
+    control?: ControlType | { type: ControlType; /* See below for more */ };
+    description?: string;
+    if?: Conditional;
+    mapping?: { [key: string]: { [option: string]: any } };
+    name?: string;
+    options?: string[];
+    table?: {
+      category?: string;
+      defaultValue?: { summary: string; detail?: string };
+      subcategory?: string;
+      type?: { summary?: string; detail?: string };
+    },
+    type?: SBType | SBScalarType['name'];
+  }
+}
+```
