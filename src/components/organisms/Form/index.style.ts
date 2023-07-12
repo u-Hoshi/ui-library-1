@@ -13,7 +13,7 @@ export const EditProfileBoxStyle = {
   boxShadow: '0px 0px 10px 0px rgba(191, 191, 191, 0.25)',
 };
 
-export const AvaterInsideBoxStyle = {
+export const AvatarInsideBoxStyle = {
   width: 536,
   height: 240,
 };

@@ -7,8 +7,8 @@ import { Check } from '../../molecules';
 
 import {
   AvatarBoxStyle,
+  AvatarInsideBoxStyle,
   AvatarStyle,
-  AvaterInsideBoxStyle,
   StyledBadge,
   sxGridStyle,
 } from './index.style';
@@ -23,7 +23,7 @@ const CustomForm = () => {
   };
 
   return (
-    <Box sx={AvaterInsideBoxStyle}>
+    <Box sx={AvatarInsideBoxStyle}>
       <Box sx={AvatarBoxStyle}>
         <Avatar
           src={AvatarImageStyles[activeAvatarIndex]}
