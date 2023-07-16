@@ -1,5 +1,15 @@
 # storybookに関して
 
+- [storybookに関して](#storybookに関して)
+  - [インストール](#インストール)
+  - [muiのthemeをstorybookで適用させる](#muiのthemeをstorybookで適用させる)
+  - [Chromaticにデプロイ](#chromaticにデプロイ)
+  - [UIテスト](#uiテスト)
+  - [AutoDocsについて](#autodocsについて)
+  - [argTypesについて](#argtypesについて)
+  - [エイリアスが正常にインポートできない問題](#エイリアスが正常にインポートできない問題)
+
+
 ## インストール
 
 ```
@@ -131,3 +141,26 @@ Type:
   }
 }
 ```
+
+## エイリアスが正常にインポートできない問題
+
+`.storybook/main.ts`にwebpackFinalsの設定を追加する
+
+```ts:.storybook/main.ts
+const config: StorybookConfig = {
+// 省略
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../'),
+      };
+    }
+    return config;
+  },
+};
+```
+
+今回は「`@`は`"../"`」を追加したが、`@`や`"../"`以外でも問題ない。
+
+[公式ドキュメント](https://storybook.js.org/docs/react/builders/webpack#troubleshooting)
