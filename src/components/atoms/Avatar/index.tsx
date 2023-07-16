@@ -10,7 +10,7 @@ const CustomAvatar = (props: Props) => (
     onClick={props.onClick}
     sx={props.sx}
     src={props.src}
-    alt={props.src}
+    alt={props.alt}
   />
 );
 export default CustomAvatar;

@@ -16,7 +16,20 @@ import {
 const CustomForm = () => {
   const [activeAvatarIndex, setActiveAvatarIndex] = React.useState(0);
 
-  const AvatarImageStyles = ['/1221.png', '/2412.png', '/2415.png'];
+  const AvatarImages = [
+    {
+      src: '/1221.png',
+      alt: 'リンゴ',
+    },
+    {
+      src: '/2412.png',
+      alt: 'バナナ',
+    },
+    {
+      src: '/2415.png',
+      alt: 'ブルーベリー',
+    },
+  ];
 
   const handleAvatarClick = (index: number) => {
     setActiveAvatarIndex(index);
@@ -26,33 +39,36 @@ const CustomForm = () => {
     <Box sx={AvatarInsideBoxStyle}>
       <Box sx={AvatarBoxStyle}>
         <Avatar
-          src={AvatarImageStyles[activeAvatarIndex]}
+          src={AvatarImages[activeAvatarIndex].src}
           onClick={() => {}}
           sx={AvatarStyle}
+          alt="selected-avatar"
         />
       </Box>
       <Grid
         container
         sx={sxGridStyle}
       >
-        {AvatarImageStyles.map((src, index) => (
+        {AvatarImages.map((AvatarImage, index) => (
           <Grid
             item
-            key={`avatar-${src}`}
+            key={`avatar-${AvatarImage.src}`}
           >
             {index === activeAvatarIndex ? (
               <StyledBadge badgeContent={<Check onClick={() => {}} />}>
                 <Avatar
-                  src={src}
+                  src={AvatarImage.src}
                   onClick={() => handleAvatarClick(index)}
                   sx={AvatarStyle}
+                  alt={AvatarImage.alt}
                 />
               </StyledBadge>
             ) : (
               <Avatar
-                src={src}
+                src={AvatarImage.src}
                 onClick={() => handleAvatarClick(index)}
                 sx={AvatarStyle}
+                alt={AvatarImage.alt}
               />
             )}
           </Grid>
