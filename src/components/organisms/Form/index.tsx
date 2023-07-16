@@ -1,17 +1,10 @@
-import { Grid } from '@mui/material';
 import React from 'react';
 
-import { Avatar, Box } from '@/src/components/atoms';
+import { Avatar, Box, Grid } from '@/src/components/atoms';
 
 import { Check } from '../../molecules';
 
-import {
-  AvatarBoxStyle,
-  AvatarInsideBoxStyle,
-  AvatarStyle,
-  StyledBadge,
-  sxGridStyle,
-} from './index.style';
+import { AvatarBoxStyle, AvatarStyle, StyledBadge, sxGridStyle } from './index.style';
 
 const CustomForm = () => {
   const [activeAvatarIndex, setActiveAvatarIndex] = React.useState(0);
@@ -36,7 +29,7 @@ const CustomForm = () => {
   };
 
   return (
-    <Box sx={AvatarInsideBoxStyle}>
+    <>
       <Box sx={AvatarBoxStyle}>
         <Avatar
           src={AvatarImages[activeAvatarIndex].src}
@@ -74,7 +67,7 @@ const CustomForm = () => {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </>
   );
 };
 
