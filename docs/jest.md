@@ -38,3 +38,23 @@ ci-lint.yamlに以下を追加する。
 ```
 
 これでciで回すことができる
+
+
+## 参考
+
+### できるだけgetByRoleを使うようにする
+
+#### imgの取得
+```
+    const clickAvatars = screen.getByAltText('/2412.png');
+    const clickAvatars = screen.getByRole('img', { name: '/2412.png' });
+```
+画像を2つの方法で取得することができる。2つの違いは下記の通り。
+1. getByAltText('/2412.png'):
+この関数は、alt属性が'/2412.png'である要素を取得。主にimgタグのような視覚的な要素を指定して取得するのに用いる。
+
+2. getByRole('img', { name: '/2412.png' }):
+この関数は、role属性が'img'で、かつnameオプション（通常はアクセシビリティツリーに表示されるテキスト）が'/2412.png'である要素を取得。roleは、HTML要素が何を表すのか、どのような動作を持つのかを示すもので、スクリーンリーダーなどの支援技術に利用される。
+
+どちらも同じ要素を取得することができるが、getByRoleは要素の構造やスタイルに依存しないためテストが壊れにくい。またオプションでdisabled属性やaria属性の有無を指定できるから使いやすいので、できるだけgetByRoleを使うようにする。
+

@@ -12,7 +12,7 @@ describe('CustomForm', () => {
   it('changes selected avatar on click', () => {
     render(<CustomForm />);
     const avatars = screen.getAllByRole('img');
-    const clickAvatars = screen.getByAltText('/2412.png');
+    const clickAvatars = screen.getByRole('img', { name: 'バナナ' });
     fireEvent.click(clickAvatars);
 
     expect(avatars[0].getAttribute('src')).toContain('/2412.png');
