@@ -8,6 +8,7 @@
   - [AutoDocsについて](#autodocsについて)
   - [argTypesについて](#argtypesについて)
   - [エイリアスが正常にインポートできない問題](#エイリアスが正常にインポートできない問題)
+  - [storybookでローカルの`public`フォルダの画像を表示させる](#storybookでローカルのpublicフォルダの画像を表示させる)
 
 
 ## インストール
@@ -164,3 +165,16 @@ const config: StorybookConfig = {
 今回は「`@`は`"../"`」を追加したが、`@`や`"../"`以外でも問題ない。
 
 [公式ドキュメント](https://storybook.js.org/docs/react/builders/webpack#troubleshooting)
+
+## storybookでローカルの`public`フォルダの画像を表示させる
+
+staticDirsに静的ファイルとして`public`を追加する
+
+```ts:.storybook/main.ts
+const config: StorybookConfig = {
+// 省略
+  staticDirs: ['../public', '../static'],
+};
+```
+
+[staticDirs](https://storybook.js.org/docs/react/api/main-config-static-dirs)
