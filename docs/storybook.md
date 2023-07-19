@@ -1,6 +1,7 @@
 # storybookに関して
 
 - [storybookに関して](#storybookに関して)
+  - [Storybookの存在意義](#storybookの存在意義)
   - [インストール](#インストール)
   - [muiのthemeをstorybookで適用させる](#muiのthemeをstorybookで適用させる)
   - [Chromaticにデプロイ](#chromaticにデプロイ)
@@ -10,6 +11,18 @@
   - [エイリアスが正常にインポートできない問題](#エイリアスが正常にインポートできない問題)
   - [storybookでローカルの`public`フォルダの画像を表示させる](#storybookでローカルのpublicフォルダの画像を表示させる)
 
+
+## Storybookの存在意義
+
+> コンポーネントの仕様を確認する
+
+デザインを確認するだけではなく、コンポーネントの仕様を言語化して確認することが重要
+
+>不具合調査の際には、どの層がどんな責務を持っているかを把握して切り分けながら調査していくことが大切になります。
+TodoListとTodoItem両方のStoryがあることで、責務の分担がソースコードを読まずとも明確になるので調査速度に大きく向上するでしょう。
+
+参考文献
+https://qiita.com/Kontam/items/299078aceb1988e8ac66
 
 ## インストール
 
