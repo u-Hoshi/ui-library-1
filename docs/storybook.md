@@ -73,7 +73,7 @@ Would you like me to add it for you? [y/N]`は「y」と答えると、scripts �
 
 https://www.chromatic.com/setup?appId=64a8009ea6fee9b63fbd6a01 に登録する
 
-このままcommitするとChromaticのトークンが漏れるので、環境変数に登録する
+このままcommitするとChromaticのトークンが漏れるので、環境変数に登録する(settings/secrets/actionsのrepository secretに記述)
 
 ```
 "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
