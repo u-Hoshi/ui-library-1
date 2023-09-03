@@ -53,6 +53,8 @@ export const decorators = [
 ];
 ```
 
+decoratorに関して https://github.com/storybookjs/addon-styling/blob/next/docs/api.md#decorators
+
 ## Chromaticにデプロイ
 
 [Chromatic](https://www.chromatic.com/?utm_source=storybook_website&utm_medium=link&utm_campaign=storybook)にアクセスして、GitHubアカウントでサインアップ
