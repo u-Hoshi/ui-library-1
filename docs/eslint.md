@@ -3,7 +3,7 @@
 ## インストール
 
 ```sh
-$ npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-typescript eslint-config-prettier prettier eslint-config-nex
+$ npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-typescript eslint-config-prettier prettier eslint-config-next
 ```
 
 ## 各パッケージについて
